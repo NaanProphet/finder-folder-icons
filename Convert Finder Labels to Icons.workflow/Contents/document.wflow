@@ -18,6 +18,75 @@
 					<key>Container</key>
 					<string>List</string>
 					<key>Optional</key>
+					<true/>
+					<key>Types</key>
+					<array>
+						<string>com.apple.cocoa.path</string>
+					</array>
+				</dict>
+				<key>AMActionVersion</key>
+				<string>2.1.1</string>
+				<key>AMApplication</key>
+				<array>
+					<string>Finder</string>
+				</array>
+				<key>AMParameterProperties</key>
+				<dict/>
+				<key>AMProvides</key>
+				<dict>
+					<key>Container</key>
+					<string>List</string>
+					<key>Types</key>
+					<array>
+						<string>com.apple.cocoa.path</string>
+					</array>
+				</dict>
+				<key>AMRequiredResources</key>
+				<array/>
+				<key>ActionBundlePath</key>
+				<string>/System/Library/Automator/Get Selected Finder Items 2.action</string>
+				<key>ActionName</key>
+				<string>Get Selected Finder Items</string>
+				<key>ActionParameters</key>
+				<dict/>
+				<key>BundleIdentifier</key>
+				<string>com.apple.Automator.GetSelectedFinderItems2</string>
+				<key>CFBundleVersion</key>
+				<string>2.1.1</string>
+				<key>CanShowSelectedItemsWhenRun</key>
+				<false/>
+				<key>CanShowWhenRun</key>
+				<true/>
+				<key>Category</key>
+				<array>
+					<string>AMCategoryFilesAndFolders</string>
+				</array>
+				<key>Class Name</key>
+				<string>AMGetSelectedFinderItemsAction</string>
+				<key>InputUUID</key>
+				<string>F6313B79-7C0B-4741-A366-88C76994C492</string>
+				<key>Keywords</key>
+				<array/>
+				<key>OutputUUID</key>
+				<string>CE68B236-6846-4E53-8D8A-D0C18C19E289</string>
+				<key>UUID</key>
+				<string>EE2963CF-A5C9-4ACA-B188-BC905E0DEB4A</string>
+				<key>UnlocalizedApplications</key>
+				<array>
+					<string>Finder</string>
+				</array>
+				<key>arguments</key>
+				<dict/>
+			</dict>
+		</dict>
+		<dict>
+			<key>action</key>
+			<dict>
+				<key>AMAccepts</key>
+				<dict>
+					<key>Container</key>
+					<string>List</string>
+					<key>Optional</key>
 					<false/>
 					<key>Types</key>
 					<array>
@@ -60,7 +129,7 @@
 				<key>CFBundleVersion</key>
 				<string>1.0.2</string>
 				<key>CanShowSelectedItemsWhenRun</key>
-				<false/>
+				<true/>
 				<key>CanShowWhenRun</key>
 				<true/>
 				<key>Category</key>
@@ -103,7 +172,7 @@
 				<key>isViewVisible</key>
 				<true/>
 				<key>location</key>
-				<string>529.000000:170.000000</string>
+				<string>442.000000:236.000000</string>
 				<key>nibPath</key>
 				<string>/System/Library/Automator/Get Folder Contents.action/Contents/Resources/Base.lproj/main.nib</string>
 			</dict>
@@ -265,7 +334,7 @@
 				<key>isViewVisible</key>
 				<true/>
 				<key>location</key>
-				<string>529.000000:330.000000</string>
+				<string>442.000000:396.000000</string>
 				<key>nibPath</key>
 				<string>/System/Library/Automator/Filter Finder Items 2.action/Contents/Resources/Base.lproj/main.nib</string>
 			</dict>
@@ -328,8 +397,9 @@ fi
 
 for f in "$@"
 do
-	/Applications/Finder\ Folder\ Icons.app/Contents/Resources/folder-colors.sh "$f"
-done</string>
+	"$HOME"/Library/Services/Convert\ Finder\ Labels\ to\ Icons.workflow/Contents/Resources/folder-colors.sh "$f"
+done
+</string>
 					<key>CheckedForUserDefaultShell</key>
 					<true/>
 					<key>inputMethod</key>
@@ -442,7 +512,7 @@ done</string>
 				<key>isViewVisible</key>
 				<true/>
 				<key>location</key>
-				<string>529.000000:513.000000</string>
+				<string>442.000000:694.000000</string>
 				<key>nibPath</key>
 				<string>/System/Library/Automator/Run Shell Script.action/Contents/Resources/English.lproj/main.nib</string>
 			</dict>
@@ -452,19 +522,26 @@ done</string>
 	</array>
 	<key>connectors</key>
 	<dict>
-		<key>B203A3B4-CABA-4018-B794-848D33F099F9</key>
+		<key>23F8D61B-4661-4685-BE12-6A7B2864DDA3</key>
 		<dict>
 			<key>from</key>
 			<string>21EC4872-22D4-4390-8F1F-D1EE4896DC55 - 21EC4872-22D4-4390-8F1F-D1EE4896DC55</string>
 			<key>to</key>
 			<string>2C6E43A1-E628-4583-8090-7429BDA5C909 - 2C6E43A1-E628-4583-8090-7429BDA5C909</string>
 		</dict>
-		<key>B44245AC-52C1-412B-9C11-D510372C9BB5</key>
+		<key>43CD6D2B-1292-4CC0-AAD8-ACA886B8AB63</key>
 		<dict>
 			<key>from</key>
 			<string>2C6E43A1-E628-4583-8090-7429BDA5C909 - 2C6E43A1-E628-4583-8090-7429BDA5C909</string>
 			<key>to</key>
 			<string>8A1CA52B-789B-4136-8140-921D9B023592 - 8A1CA52B-789B-4136-8140-921D9B023592</string>
+		</dict>
+		<key>C48124AE-1259-4814-9975-BE29ED6686CD</key>
+		<dict>
+			<key>from</key>
+			<string>EE2963CF-A5C9-4ACA-B188-BC905E0DEB4A - EE2963CF-A5C9-4ACA-B188-BC905E0DEB4A</string>
+			<key>to</key>
+			<string>21EC4872-22D4-4390-8F1F-D1EE4896DC55 - 21EC4872-22D4-4390-8F1F-D1EE4896DC55</string>
 		</dict>
 	</dict>
 	<key>variables</key>
@@ -480,8 +557,18 @@ done</string>
 	</array>
 	<key>workflowMetaData</key>
 	<dict>
+		<key>serviceApplicationBundleID</key>
+		<string></string>
+		<key>serviceApplicationPath</key>
+		<string></string>
+		<key>serviceInputTypeIdentifier</key>
+		<string>com.apple.Automator.fileSystemObject.folder</string>
+		<key>serviceOutputTypeIdentifier</key>
+		<string>com.apple.Automator.nothing</string>
+		<key>serviceProcessesInput</key>
+		<integer>0</integer>
 		<key>workflowTypeIdentifier</key>
-		<string>com.apple.Automator.application</string>
+		<string>com.apple.Automator.servicesMenu</string>
 	</dict>
 </dict>
 </plist>
